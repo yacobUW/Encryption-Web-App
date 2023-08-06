@@ -1,0 +1,47 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex; /* Added to use flexbox for layout */
+  justify-content: space-between; /* Added to separate input containers */
+}
+
+/* Input and Button Styles */
+.input-container {
+  flex: 1; /* Added to make both input containers take equal space */
+}
+
+h2 {
+  margin-bottom: 10px; /* Added to add some spacing below the heading */
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 10px; /* Added to create some space between input elements */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff; /* Added to style the button with a blue color */
+  color: #fff; /* Added to style the button text with white color */
+  border: none; /* Added to remove the default button border */
+  border-radius: 4px; /* Added to give the button rounded corners */
+}
+
+/* Result Styles */
+.result-container {
+  display: flex; /* Added to use flexbox for layout */
+ 

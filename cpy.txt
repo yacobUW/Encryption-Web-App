@@ -32,8 +32,8 @@
       <div id="decryptedOutput"></div>
     </div>
   </div>
-  <script type="module" src="js/react/APP.js"></script>
-  <script type="module" src="js/encryption/AES_encryption.js"></script>
-  <script type="module" src="js/decryption/AES_decryption.js"></script>
+  <script src="js/react/APP.js"></script>
+  <script src="js/encryption/AES_encryption.js"></script>
+  <script src="js/decryption/AES_decryption.js"></script>
 </body>
 </html>
