@@ -1,65 +1,39 @@
-/* Reset some default browser styles */
-body, h1, p, textarea, button {
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-body {
-  padding: 20px;
-  background-color: #f7f7f7;
-}
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-form {
-  width: 80%;
-  max-width: 600px;
+/* Container Styles */
+.container {
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+/* Input and Button Styles */
+.form-group {
+  margin-bottom: 10px;
 }
 
 textarea {
   width: 100%;
-  resize: vertical;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  font-size: 16px;
+  resize: vertical;
 }
 
 button {
-  margin-top: 10px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
-
-#encryptionOutput,
-#decryptionOutput {
+/* Result Styles */
+.result {
   margin-top: 20px;
   padding: 10px;
-  background-color: #f2f2f2;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  word-wrap: break-word;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
 }
-
