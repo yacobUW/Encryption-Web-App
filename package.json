@@ -1,0 +1,16 @@
+{
+  "name": "encryption-web-app",
+  "version": "1.0.0",
+  "description": "This is a web application that allows users to encrypt and decrypt strings using AES encryption. The application is built entirely on the frontend using HTML, CSS, and JavaScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
