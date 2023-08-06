@@ -8,32 +8,39 @@
 </head>
 <body>
   <div class="container">
-    <div class="input-container">
-      <h2>Input Text to Encrypt</h2>
-      <textarea id="inputText" rows="4" placeholder="Enter text to encrypt..."></textarea>
+    <h1>AES Encryption Web App</h1>
+
+    <div class="form-group">
+      <label for="inputText">Enter Text to Encrypt:</label>
+      <textarea id="inputText" rows="4" placeholder="Type your text to encrypt here..."></textarea>
+    </div>
+
+    <div class="form-group">
       <button onclick="handleEncryption()">Encrypt</button>
     </div>
 
-    <div class="input-container">
-      <h2>Input Text to Decrypt</h2>
-      <textarea id="encryptedText" rows="4" placeholder="Enter encrypted text to decrypt..."></textarea>
+    <div class="form-group">
+      <label for="outputText">Encrypted Text:</label>
+      <textarea id="outputText" rows="4" readonly></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="encryptedText">Enter Text to Decrypt:</label>
+      <textarea id="encryptedText" rows="4" placeholder="Type your encrypted text here..."></textarea>
+    </div>
+
+    <div class="form-group">
       <button onclick="handleDecryption()">Decrypt</button>
     </div>
-  </div>
 
-  <div class="result-container">
-    <div class="result">
-      <strong>Encrypted Text:</strong>
-      <div id="encryptedOutput"></div>
-    </div>
-
-    <div class="result">
-      <strong>Decrypted Text:</strong>
-      <div id="decryptedOutput"></div>
+    <div class="form-group">
+      <label for="decryptedText">Decrypted Text:</label>
+      <textarea id="decryptedText" rows="4" readonly></textarea>
     </div>
   </div>
+
   <script src="js/react/APP.js"></script>
   <script src="js/encryption/AES_encryption.js"></script>
-  <script src="js/decryption/AES_decryption.js"></script>
+  <script src="js/encryption/AES_decryption.js"></script>
 </body>
 </html>
