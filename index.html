@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AES Encryption Web App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>AES Encryption Web App</h1>
+    <form id="encryptionForm">
+        <label for="inputText">Enter text to encrypt:</label>
+        <textarea id="inputText" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Encrypt</button>
+    </form>
+    <div id="encryptionOutput">
+        <!-- This is where the encrypted text will be displayed -->
+    </div>
+
+    <form id="decryptionForm">
+        <label for="encryptedText">Enter encrypted text to decrypt:</label>
+        <textarea id="encryptedText" rows="4" cols="50"></textarea>
+        <br>
+        <button type="submit">Decrypt</button>
+    </form>
+    <div id="decryptionOutput">
+        <!-- This is where the decrypted text will be displayed -->
+    </div>
+
+    <script src="js/encryption/encryption.js"></script>
+    <script src="js/decryption/decryption.js"></script>
+</body>
+</html>
