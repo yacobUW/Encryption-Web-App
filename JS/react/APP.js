@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
+import aesEncrypt from './path/to/AES_encryption'; // Replace with the correct path to AES_encryption.js
+import aesDecrypt from './path/to/AES_decryption'; // Replace with the correct path to AES_decryption.js
 import './styles.css';
 
 function App() {
   const [inputText, setInputText] = useState('');
   const [encryptedText, setEncryptedText] = useState('');
   const [decryptedText, setDecryptedText] = useState('');
+  const secretKey = 'your_secret_key'; // Replace with your actual AES secret key
 
   const handleEncryption = () => {
-    // Your AES encryption logic here
-    // Use the 'inputText' state variable for the input text
-    // Set the result in the 'encryptedText' state variable
+    const ciphertext = aesEncrypt(inputText, secretKey);
+    setEncryptedText(ciphertext);
   };
 
   const handleDecryption = () => {
-    // Your AES decryption logic here
-    // Use the 'encryptedText' state variable for the input text
-    // Set the result in the 'decryptedText' state variable
+    const plaintext = aesDecrypt(encryptedText, secretKey);
+    setDecryptedText(plaintext);
   };
 
   return (
