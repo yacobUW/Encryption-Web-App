@@ -7,7 +7,7 @@ function App() {
   const [inputText, setInputText] = useState('');
   const [encryptedText, setEncryptedText] = useState('');
   const [decryptedText, setDecryptedText] = useState('');
-  const secretKey = 'your_secret_key'; // Replace with your actual AES secret key
+  const secretKey = '4d27e43f6a0e9c1877e85e19b42aa9f3'; // Replace with your actual AES secret key
 
   const handleEncryption = () => {
     const ciphertext = aesEncrypt(inputText, secretKey);
