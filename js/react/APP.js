@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import crypto from 'crypto';
 import aesEncrypt from '../encryption/AES_encryption'; // Replace with the correct path to AES_encryption.js
 import aesDecrypt from '../decryption/AES_decryption'; // Replace with the correct path to AES_decryption.js
 import './styles.css';
