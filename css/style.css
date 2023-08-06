@@ -10,11 +10,17 @@ body {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  display: flex; /* Added to use flexbox for layout */
+  justify-content: space-between; /* Added to separate input containers */
 }
 
 /* Input and Button Styles */
-.form-group {
-  margin-bottom: 10px;
+.input-container {
+  flex: 1; /* Added to make both input containers take equal space */
+}
+
+h2 {
+  margin-bottom: 10px; /* Added to add some spacing below the heading */
 }
 
 textarea {
@@ -22,18 +28,20 @@ textarea {
   padding: 10px;
   font-size: 16px;
   resize: vertical;
+  margin-bottom: 10px; /* Added to create some space between input elements */
 }
 
 button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #007bff; /* Added to style the button with a blue color */
+  color: #fff; /* Added to style the button text with white color */
+  border: none; /* Added to remove the default button border */
+  border-radius: 4px; /* Added to give the button rounded corners */
 }
 
 /* Result Styles */
-.result {
-  margin-top: 20px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  background-color: #f9f9f9;
-}
+.result-container {
+  display: flex; /* Added to use flexbox for layout */
+ 
