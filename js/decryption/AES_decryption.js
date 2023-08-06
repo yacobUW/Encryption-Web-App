@@ -1,4 +1,6 @@
-const CryptoJS = require('crypto-js');
+// const CryptoJS = require('crypto-js');
+// AES_decryption.js
+import CryptoJS from 'crypto-js';
 
 // AES Decryption function
 function aesDecrypt(ciphertext, secretKey) {
