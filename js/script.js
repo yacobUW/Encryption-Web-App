@@ -1,21 +1,26 @@
-// Get the HTML elements
+const aesEncrypt = require('./encryption/AES_encryption.js');
+const aesDecrypt = require('./decryption/AES_decryption.js');
+
+// Get references to the HTML elements
 const inputTextElement = document.getElementById('inputText');
 const encryptedTextElement = document.getElementById('encryptedText');
-const encryptButton = document.getElementById('encryptButton');
-const decryptButton = document.getElementById('decryptButton');
 const encryptedOutputElement = document.getElementById('encryptedOutput');
 const decryptedOutputElement = document.getElementById('decryptedOutput');
 
-// Handle encryption when the "Encrypt" button is clicked
-encryptButton.addEventListener('click', () => {
+// Encryption button click handler
+document.getElementById('encryptBtn').addEventListener('click', () => {
   const plaintext = inputTextElement.value;
+  const secretKey = 'your_secret_key'; // Replace with your actual AES secret key
+
   const encryptedText = aesEncrypt(plaintext, secretKey);
   encryptedTextElement.value = encryptedText;
 });
 
-// Handle decryption when the "Decrypt" button is clicked
-decryptButton.addEventListener('click', async () => {
+// Decryption button click handler
+document.getElementById('decryptBtn').addEventListener('click', () => {
   const ciphertext = encryptedTextElement.value;
-  const decryptedText = await aesDecrypt(ciphertext, secretKey);
+  const secretKey = 'your_secret_key'; // Replace with your actual AES secret key
+
+  const decryptedText = aesDecrypt(ciphertext, secretKey);
   decryptedOutputElement.textContent = decryptedText;
 });
