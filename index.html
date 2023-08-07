@@ -8,31 +8,44 @@
 </head>
 <body>
   <div class="container">
-    <div class="input-container">
-      <h2>Input Text to Encrypt</h2>
+    <h1>AES Encryption Web App</h1>
+
+    <!-- Encryption Form -->
+    <div class="form-group">
+      <label for="inputText">Enter text to encrypt:</label>
       <textarea id="inputText" rows="4" placeholder="Enter text to encrypt..."></textarea>
-      <button onclick="handleEncryption()">Encrypt</button>
+    </div>
+    <div class="form-group">
+      <button id="encryptButton">Encrypt</button>
     </div>
 
-    <div class="input-container">
-      <h2>Input Text to Decrypt</h2>
-      <textarea id="encryptedText" rows="4" placeholder="Enter encrypted text to decrypt..."></textarea>
-      <button onclick="handleDecryption()">Decrypt</button>
-    </div>
-  </div>
-
-  <div class="result-container">
+    <!-- Display Encrypted Text -->
     <div class="result">
       <strong>Encrypted Text:</strong>
       <div id="encryptedOutput"></div>
     </div>
 
+    <!-- Decryption Form -->
+    <div class="form-group">
+      <label for="encryptedText">Enter encrypted text to decrypt:</label>
+      <textarea id="encryptedText" rows="4" placeholder="Enter encrypted text to decrypt..."></textarea>
+    </div>
+    <div class="form-group">
+      <button id="decryptButton">Decrypt</button>
+    </div>
+
+    <!-- Display Decrypted Text -->
     <div class="result">
       <strong>Decrypted Text:</strong>
       <div id="decryptedOutput"></div>
     </div>
   </div>
 
-  <script type="text/jsx" src="js/react/APP.js"></script>
+  <!-- Include your JavaScript files for encryption and decryption -->
+  <script src="js/encryption/AES_encryption.js"></script>
+  <script src="js/decryption/AES_decryption.js"></script>
+
+  <!-- Your main script to handle encryption and decryption logic -->
+  <script src="js/script.js"></script>
 </body>
 </html>
