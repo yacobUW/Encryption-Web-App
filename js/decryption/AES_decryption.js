@@ -1,30 +1,19 @@
+const CryptoJS = require('crypto-js');
+
 // AES Decryption function
 async function aesDecrypt(ciphertext, secretKey) {
   try {
-    const binaryData = atob(ciphertext);
-    const iv = binaryData.slice(0, 16);
-    const ciphertextData = binaryData.slice(16);
+    const ciphertextBytes = CryptoJS.enc.Base64.parse(ciphertext);
+    const iv = ciphertextBytes.slice(0, 16);
+    const encryptedData = ciphertextBytes.slice(16);
 
-    const key = await window.crypto.subtle.importKey(
-      'raw',
-      new TextEncoder().encode(secretKey),
-      { name: 'AES-CBC', length: 256 },
-      false,
-      ['decrypt']
-    );
-
-    const decryptedData = await window.crypto.subtle.decrypt(
-      { name: 'AES-CBC', iv: new Uint8Array(iv) },
-      key,
-      new Uint8Array(ciphertextData)
-    );
-
-    const decryptedText = new TextDecoder().decode(decryptedData);
-    return decryptedText;
+    const decrypted = CryptoJS.AES.decrypt({ ciphertext: encryptedData }, secretKey, { iv });
+    const plaintext = decrypted.toString(CryptoJS.enc.Utf8);
+    return plaintext;
   } catch (error) {
     console.error('Error during AES decryption:', error.message);
     return null;
   }
 }
 
-export default aesDecrypt;
+module.exports = aesDecrypt;
